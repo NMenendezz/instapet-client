@@ -1,20 +1,20 @@
-import Button from "@/components/button/Button";
-import Modal from "@/components/modal/Modal";
+import Button from '@/components/button/Button'
+import Modal from '@/components/modal/Modal'
 
 const PrivacyModal = ({ isOpen, closeModal }) => {
+  if (!isOpen) return null
   return (
     <Modal
-      isOpen={isOpen}
       onRequestClose={closeModal}
-      contentLabel="Política de privacidad"
+      contentLabel='Política de privacidad'
       style={{
         overlay: {
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          backgroundColor: 'rgba(0, 0, 0, 0.5)'
         },
         content: {
-          maxWidth: "400px", // Ancho del modal
-          margin: "auto",
-        },
+          maxWidth: '400px', // Ancho del modal
+          margin: 'auto'
+        }
       }}
     >
       {/* Contenido del modal */}
@@ -130,17 +130,17 @@ const PrivacyModal = ({ isOpen, closeModal }) => {
 
       {/* Botón para cerrar el modal */}
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}
       >
         <Button
-          text="Cerrar"
-          type="submit"
-          variant="primary"
+          text='Cerrar'
+          type='submit'
+          variant='primary'
           onClick={closeModal}
         />
       </div>
     </Modal>
-  );
-};
+  )
+}
 
-export default PrivacyModal;
+export default PrivacyModal
