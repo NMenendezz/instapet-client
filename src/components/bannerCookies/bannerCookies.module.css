@@ -1,0 +1,16 @@
+.banner {
+  width: 100%;
+  max-width: 1920px;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: var(--light-orange);
+  color: var(--alternative-font-color);
+  font-size: .8rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  z-index: 5;
+}

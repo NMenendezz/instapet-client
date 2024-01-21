@@ -1,0 +1,126 @@
+.header {
+  grid-area: header;
+  background-color: var(--bg-secondary-color);
+  color: var(--primary-font-color);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.title_container {
+  padding: 0 2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: "Caveat";
+  color: var(--primary-font-color);
+  cursor: pointer;
+}
+
+.search_container {
+  position: relative;
+  flex-grow: 2;
+}
+
+.search_form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid transparent;
+  border-bottom: 1px solid var(--orange-color);
+}
+
+.search:focus {
+  border-bottom: 1.5px solid var(--orange-color);
+  outline: none;
+}
+
+.search::placeholder {
+  color: var(--placeholder-color);
+}
+
+.search_button {
+  color: var(--primary-font-color);
+  position: absolute;
+  font-size: 1rem;
+  background-color: inherit;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.notifications_container {
+  padding: 0.5rem 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notifications:hover {
+  color: var(--orange-color);
+  transition: color .3s;
+}
+
+.logo {
+  width: 3rem;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.search_results {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--bg-secondary-color);
+}
+
+.search_results ul {
+  padding: 1rem;
+  margin: 0;
+}
+
+.search_results ul:hover {
+  background-color: var(--bg-main-color);
+}
+
+.user_img {
+  display: none;
+  width: 34.5px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 599px) {
+  .header {
+    position: fixed;
+    z-index: 5;
+    border-bottom: 2px solid var(--bg-main-color);
+    width: 100%;
+  }
+  .logo, .title {
+    display: none;
+  }
+
+  .search_container {
+    flex-grow: 4;
+  }
+
+  .user_img {
+    display: block;
+  }
+}

@@ -1,0 +1,36 @@
+.message {
+  display: inline-block;
+  margin: 0;
+  padding: .5rem;
+  width: fit-content;
+  max-width: 90%;
+  border-radius: 6px;
+}
+
+.message_sent {
+  align-self: end;
+  background-color: var(--light-orange);
+  color: var(--alternative-font-color);
+}
+
+.message_received {
+  align-self: start;
+  background-color: var(--bg-secondary-color);
+  color: var(--primary-font-color);
+}
+
+.timestamp {
+  font-size: .6rem;
+  margin-left: .5rem;
+  color: var(--placeholder-color);
+}
+
+.unread::after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--orange-color);
+  border-radius: 50%;
+}
